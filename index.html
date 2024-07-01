@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/solarized.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-background-image="./assets/chatbot.jpg">
+				<p class="footer right">
+					<small>Created by <a href="https://medium.com/welld-tech">Matteo Codogno</a></small>
+				</p>
+
+				<aside class="notes">
+					<ul>
+						<li>How many of you did read the blog post?</li>
+						<li>How many of you did something with AI?</li>
+						<li>How many of you did understand what is happening behind the scene?</li>
+						<li><b>NEXT: </b>roadmap</li>
+					</ul>
+				</aside>
+			</section>
+
+			<section>
+				<h3>Today's Roadmap</h3>
+				<ul>
+					<li>The problem: Tons of documentation</li>
+					<li>OpenAI + Supabase = 7docs</li>
+					<li>Bot for the simpleness 🤖</li>
+					<li>Automate, automate everything!</li>
+					<li>Next steps</li>
+					<li>Q&A 🙋🏾‍♂️</li>
+				</ul>
+				<aside class="notes">
+					<ul>
+						<li><b>NEXT: </b>useRef</li>
+					</ul>
+				</aside>
+			</section>
+
+			<section>
+				<section>
+					<h3>The problem: Tons of documentation</h3>
+					
+					<p class="fragment fade-in">e.g. How does it work <code class="green">useRef</code>?</p>
+					
+					<aside class="notes">
+						<ul>
+							<li>Find info across large amounts of documentation is hard</li>
+							<li><b>NEXT: </b>useRef</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section data-preload data-background-iframe="https://react.dev/" data-background-interactive>
+					<div class="iframe-overlay-block-rm fragment fade-in-then-out">
+						<p>If the parent component wants to access the child component's <code>ref</code>?</p>
+					</div>
+					<div class="fragment  fade-in-then-out"></div>
+					<div class="iframe-overlay-block-rm fragment fade-in-then-out">
+						<p>If I do not want to expose the entire DOM node but just a custom value?</p>
+					</div>
+
+					<aside class="notes">
+						<ul>
+							<li>reference value not needed for rendering</li>
+							<li>store information between renders</li>
+							<li>Changing the ref doesn’t cause a re-render</li>
+							<li>Information local to each component</li>
+							<li><b>NEXT: </b>forwardRef</li>
+							<li><b>NEXT: </b>useImperativeHandle</li>
+							<li><b>NEXT: </b>we have the same issus - wellD book</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h3>wellD Book 📚</h3>
+					<ul>
+						<li class="fragment fade-in">I can't find the <b>WHATEVER</b> folder on Google Drive.</li>
+						<li class="fragment fade-in">I have a medical appointment. Should I take a day off?</li>
+						<li class="fragment fade-in">How can I access the office network from my house?</li>
+
+						<img class="center fragment fade-in" src="assets/kill-me.gif" width="480" height="299" />
+					</ul>
+
+					<aside class="notes">
+						<ul>
+							<li>HR problems</li>
+							<li>Always the same questions</li>
+							<li><b>NEXT: </b>We are living in the digital era</li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+
+			<section>
+				<h3>2024 🌍</h3>
+				<div class="r-stack">
+					<img class="fragment" src="assets/remote-working.jpg">
+					<img class="fragment" src="assets/teams.jpg">
+					<img class="fragment" src="assets/discord.jpg">
+					<img class="fragment" src="assets/watchless.jpg">
+					<img class="fragment" src="assets/magicmouse.jpg">
+					<img class="fragment" src="assets/tesla-prius.jpeg">
+					<img class="fragment" src="assets/crypto-001.png">
+					<img class="fragment" src="assets/crypto-002.png">
+					<img class="fragment" src="assets/ChatGPT.jpeg">
+					<!-- <img class="fragment" src="assets/talk_to_bot.png"> -->
+				</div>
+
+				<aside class="notes">
+					<ul>
+						<li>remote working</li>
+						<li>very good tool for async communication</li>
+						<li>great inventions</li>
+						<li>digital currencies</li>
+						<li>chatGPT</li>
+						<li><b>NEXT: </b>7Docs</li>
+					</ul>
+				</aside>
+			</section>
+
+			<section>
+				<section>
+					<h3>OpenAI + Supabase = 7Docs</h3>
+					<ul>
+						<li class="fragment">
+							Convert knowledge into machine-readable format
+						</li>
+						<li class="fragment">
+							Store the knowledge in a database
+						</li>
+						<li class="fragment">
+							Get an input from the user
+						</li>
+						<li class="fragment">
+							Find the best answer in the database
+						</li>
+						<li class="fragment">
+							Elaborate a fluent answer for the user
+						</li>
+					</ul>
+					<aside class="notes">
+						<ul>
+							<li><b>NEXT: </b>Why convert?</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="r-fit-text">
+						Convert knowledge... - Why?
+					</h3>
+					<p class="fragment r-fit-text">
+						ML algorithms are not capable to process string or images in raw form!
+					</p>
+					
+					<aside class="notes">
+						<ul>
+							<li>Not capable to process string or images in raw form</li>
+							<li>Need Numerical input to perform sort task: classification, regression clustering...</li>
+							<li>final level data has to be in numerical form</li>
+							<li><b>NEXT: </b> How convert?</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h3 class="r-fit-text">
+						Convert knowledge... - How?
+					</h3>
+					<p class="fragment r-fit-text">Vectorization or Word Embedding</p>
+
+					<aside class="notes">
+						<ul>
+							<li>Text vectorization is a broader concept that includes various techniques for converting textual data, such as documents
+							or sentences, into numerical vectors.</li>
+							<li>Vectorization: used in text classification, information retrival and ML tasks</li>
+							<li>Embedding: The goal is to capture the semantic relationships between words. Used in sentiment analysis, language translation, and text generation, where understanding the meaning and context of words is
+							important.</li>
+							<li>SUMMARY: word embedding is a specific type of text vectorization that focuses on capturing the semantic meaning of individual
+							words, while text vectorization is a more general term that covers a range of techniques for converting textual data
+							into numerical vectors at various levels of granularity</li>
+							<li><b>NEXT: </b> rabbit hole</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section data-background-image="./assets/rabbit_hole.gif"></section>
+
+				<section>
+					<h3>Terminologies</h3>
+					<ul>
+						<li class="fragment"><b>Document:</b> single text data point</li>
+						<li class="fragment"><b>Corpus:</b> collection of all the documents present in our dataset</li>
+						<li class="fragment"><b>Feature:</b> Every unique word in the corpus</li>
+					</ul>
+					<aside class="notes">
+						<ul>
+							<li>documents: e.g. review of a product by the user</li>
+							<li><b>NEXT: </b> Bag of Words</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h3>Bag-of-Words (BoW)</h3>
+					<blockquote>
+						... is a text preprocessing technique that converts a document into a vector of word frequencies, where each dimension represents the occurrence or count of a specific word in the document.
+					</blockquote>
+					<aside class="notes">
+						<ul>
+							<li></li>
+							<li><b>NEXT: </b> Vectorization</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h3>BoW - Processing</h3>
+					<pre>
+						<code data-line-numbers="1-3|5-9|11-12|13-14">Document 1: "The quick brown fox jumps over the lazy dog."
+Document 2: "A brown fox is a fast runner."
+Document 3: "The dog and the fox are friends."
+
+      Tokenization                Lowercasing
+          |                           |
+          v                           v
+Document 1 Tokens:         Document 1 Tokens:
+["the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"]
+
+Document 2 Tokens:         Document 2 Tokens:
+["a", "brown", "fox", "is", "a", "fast", "runner"]
+
+Document 3 Tokens:         Document 3 Tokens:
+["the", "dog", "and", "the", "fox", "are", "friends"]
+						</code>
+					</pre>
+					<aside class="notes">
+						<ul>
+							<li>
+								tokenization - process of dividing each sentence into words or smaller parts
+							</li>
+							<li>convert to lowercase</li>
+							<li><b>NEXT: </b> extract unique word, create the vocabulary</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h3>BoW - Build the Vocabulary</h3>
+					<pre>
+						<code>
+      Building Vocabulary
+              |
+              v
+Vocabulary: ["a", "and", "are", "brown", "dog", "fast", "fox", "friends", "is", "jumps", "lazy", "over", "quick", "runner", "the"]
+						</code>
+					</pre>
+					<aside class="notes">
+						<ul>
+							<li><b>NEXT: </b> create vectors</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h3>BoW - Create Vectors</h3>
+					<pre>
+						<code>
+       Bag-of-Words Vectors
+               |
+               v
+Document 1 BoW Vector: [0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 2]
+Document 2 BoW Vector: [2, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0]
+Document 3 BoW Vector: [0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 2]
+
+						</code>
+					</pre>
+
+					<aside class="notes">
+						<ul>
+							<li>For each document, create a vector that represents the frequency of each word in the vocabulary.</li>
+							<li><b>NEXT: </b> python code</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h3>BoW - python example</h3>
+					<pre>
+						<code data-line-numbers="4-9|11-18|20-24|25-31">
+from sklearn.feature_extraction.text import CountVectorizer
+
+# Sample documents
+documents = [
+    "The quick brown fox jumps over the lazy dog.",
+    "A brown fox is a fast runner.",
+    "The dog and the fox are friends."
+]
+
+# Step 1: Preprocessing and Tokenization
+def preprocess(document):
+    # Remove punctuation and convert to lowercase
+    document = document.lower()
+    document = ''.join(char for char in document if char.isalnum() or char.isspace())
+    return document
+
+preprocessed_documents = [preprocess(document) for document in documents]
+
+# Step 2: Building the Vocabulary
+vectorizer = CountVectorizer()
+X = vectorizer.fit_transform(preprocessed_documents)
+vocabulary = vectorizer.get_feature_names_out()
+
+# Step 3: Create Bag-of-Words Vectors
+bow_vectors = X.toarray()
+
+# Display the results
+print("Vocabulary:", vocabulary)
+for i, doc in enumerate(bow_vectors):
+    print(f"Document {i+1} BoW Vector:", doc)
+						</code>
+					</pre>
+					<aside class="notes">
+						<ul>
+							<li>Continuous Bag of Words</li>
+							<li>stochastic approximation</li>
+							<li>Backpropagation</li>
+							<li><b>NEXT: </b> vector database</li>
+						</ul>
+					</aside>
+				</section>
+				<aside class="notes">
+					<ul>
+						<li>this method doesn’t preserve the word order.</li>
+						<li>the problem with that is that it treats all words equally</li>
+						<li>it cannot distinguish very common words or rare words</li>
+						<li><b>NEXT: </b> Vector database</li>
+					</ul>
+				</aside>
+			</section>
+			
+			<section>
+				<section>
+					<h3>Vector Database</h3>
+					<div class="r-stack">
+						<img class="fragment fade-in-then-out" src="assets/db_weaviate.png" />
+						<img class="fragment fade-in-then-out" src="assets/db_pinecone.png" />
+						<img class="fragment fade-in-then-out" src="assets/db_qdrant.png" />
+						<img class="fragment fade-in-then-out" src="assets/db_postgres.png" />
+					</div>
+
+					<aside class="notes">
+						<ul>
+							<li>we need a database to store the vectors</li>
+							<li>we need a way to find the best answer for the given input</li>
+							<li>
+								there are many ways to do that: cosine similarity (Coseno di similitudine), inner product (Spazio prehilbertiano), euclidean distance, manhattan distance, hamming distance, jaccard similarity, etc...
+							</li>
+							<li>there are many vector databases and more are coming...</li>
+							<li>qdrant</li>
+							<li><b>NEXT: </b> PG_VECTOR</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h3>pgvector</h3>
+					<ul>
+						<li class="fragment">PostgreSQL extension for vector similarity search</li>
+						<li class="fragment">Store and query vector embeddings within your database</li>
+						<li class="fragment">Supports L2, cosine similarity, and inner product</li>
+					</ul>
+
+					<aside class="notes">
+						<ul>
+							<li>L2 = Euclidean distance</li>
+							<li>we need a way to find the best answer for the given input</li>
+							<li><b>NEXT: </b> PG_VECTOR operators</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h3>pgvector - operators</h3>
+					<table>
+						<thead>
+							<tr>
+								<th>Operator</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><-></td>
+								<td>Euclidean distance</td>
+							</tr>
+							<tr>
+								<td><#></td>
+								<td>negative inner product</td>
+							</tr>
+							<tr>
+								<td><=></td>
+								<td>cosine distance</td>
+							</tr>
+						</tbody>
+					</table>
+					<aside class="notes">
+						<ul>
+							<li>3 new operators that can be used to calculate similarity</li>
+							<li>OpenAI recommends cosine similarity on their embeddings.</li>
+							<li><b>NEXT: </b> PG_VECTOR code</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h3>pgvector - example</h3>
+					<pre>
+						<code data-line-numbers="2|4|6|8">
+CREATE EXTENSION vector;
+
+CREATE TABLE items (id bigserial PRIMARY KEY, embedding vector(3));
+
+INSERT INTO items (embedding) VALUES ('[1,2,3]'), ('[4,5,6]');
+
+SELECT * FROM items ORDER BY embedding <-> '[3,1,2]' LIMIT 5;
+						</code>
+					</pre>
+
+					<aside class="notes">
+						<ul>
+							<li>Enable the extension</li>
+							<li>Create a vector column with 3 dimensions</li>
+							<li>Insert vectors</li>
+							<li>Get the nearest neighbors by L2 distance</li>
+							<li><b>NEXT: </b> Supabase</li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h3>Supabase</h3>
+					<p class="r-fit-text">Supabase is an open source Firebase alternative.</p>
+					<aside class="notes">
+						<ul>
+							<li>Databse</li>
+							<li>API - rest and GraphQL</li>
+							<li>Authentication</li>
+							<li>Edge functions - labda function in typescript executed server side</li>
+							<li>real time</li>
+							<li>AI - A Python client for managing unstructured embeddings.</li>
+							<li>AI - An embedding generation process using open source models directly in Edge Functions.</li>
+							<li>AI - integrations with all popular AI providers</li>
+							<li>Local development</li>
+							<li>Client libraries</li>
+							<li><b>NEXT: </b> supabase example</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h3>Supabase - example</h3>
+					<pre>
+						<code data-line-numbers="5|14-17">
+  import { useEffect, useState } from "react";
+  import { createClient } from "@supabase/supabase-js";
+
+  const supabase = createClient("https://<project>.supabase.co", "<your-anon-key>");
+
+  function App() {
+    const [countries, setCountries] = useState([]);
+
+    useEffect(() => {
+      getCountries();
+    }, []);
+
+    async function getCountries() {
+      const { data } = await supabase.from("countries").select();
+      setCountries(data);
+    }
+
+    return (
+      <ul>
+        {countries.map((country) => (
+          <li key={country.name}>{country.name}</li>
+        ))}
+      </ul>
+    );
+  }
+
+  export default App;
+						</code>
+					</pre>
+
+					<aside class="notes">
+						<ul>
+							<li><b>NEXT: </b> 7docs</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h3>7docs</h3>
+
+					<p>
+						OpenAI based tool to ingest content into vector database and ready to get queried.
+					</p>
+					<ul>
+						<li class="fragment"><code class="green">@7-docs/cli</code> to ingest content from the command-line</li>
+						<li class="fragment"><code class="green">@7-docs/edge</code> for deploying functions to query the content</li>
+					</ul>
+
+					<aside class="notes">
+						<ul>
+							<li>support supabase and pinecone as DB</li>
+							<li>ingest: md, pdf and http web pages</li>
+							<li>query!</li>
+							<li><b>NEXT: </b> block diagram</li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+
+			<section>
+				<img src="assets/block_diagram.png" alt="block diagram">
+				<aside class="notes">
+					<ul>
+						<li>text-embedding-ada-002</li>
+						<li>gpt-3.5-turbo - understand and generate natural language or code</li>
+						<li><b>NEXT: </b> bot</li>
+					</ul>
+				</aside>
+			</section>
+
+			<section class="text-top text-black" data-background-image="./assets/chat.jpg">
+				<h3>Bot for the simpleness</h3>
+				<p class="r-fit-text">Discord.js + Bun</p>
+				<aside class="notes">
+					<ul>
+						<li>bot config in discord</li>
+						<li>create the main file</li>
+						<li>create the slash command</li>
+						<li>register commands</li>
+						<li>ephemeral</li>
+						<li>cooldown</li>
+						<li>Bun is an all-in-one toolkit for JavaScript and TypeScript apps</li>
+						<li>Bun runtime</li>
+						<li><b>NEXT: </b> current state</li>
+					</ul>
+				</aside>
+			</section>
+
+			<section>
+				<section>
+					<h3>current state of play</h3>
+					<p>
+						We have a bot that can answer to our questions, and a database that contains all the knowledge about our documentation.
+					</p>
+					<aside class="notes">
+						<ul>
+							<li>First time we ingest the content using the CLI</li>
+							<li>What will happen the first time we update the documentation?</li>
+							<li><b>NEXT: </b> automate</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h3>Automate, automate everything!</h3>
+
+					<ul>
+						<li class="fragment">7docs docker image</li>
+						<li class="fragment">CI pipeline to keep bot knowledge synced with the documentation</li>
+					</ul>
+
+					<aside class="notes">
+						<ul>
+							<li>there is not official 7docs docker image</li>
+							<li><b>NEXT: </b> docker image</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h3>7docs docker image</h3>
+					<pre>
+						<code data-line-numbers="2-5|7-9|11-19|21">
+FROM node:18.18 as node
+
+RUN echo "NODE Version:" && node --version
+RUN echo "NPM Version:" && npm --version
+
+FROM python:3.11.4
+
+COPY --from=node . .
+
+RUN mkdir /ci
+RUN useradd -d /ci --user-group welld
+RUN mkdir -p /ci/node/.npm-global
+RUN chown -R welld:welld /ci
+ENV NPM_CONFIG_PREFIX=/ci/node/.npm-global
+ENV PATH="${PATH}:/ci/node/.npm-global/bin"
+
+WORKDIR /ci
+USER welld
+
+RUN npm install --global 7-docs@0.5.1
+						</code>
+					</pre>
+
+					<aside class="notes">
+						<ul>
+							<li>multistage build</li>
+							<li>restricted user privileges</li>
+							<li><b>NEXT: </b> CI pipeline</li>
+						</ul>
+					</aside>
+				</section>
+				<section>
+					<h3>CI ingest job</h3>
+				
+					<pre>
+						<code data-line-numbers="2-4|5-7|13-14|15-16">
+7docs:ingest:
+	stage: ai
+	retry: 1
+	image:
+		name: docker_registry/7docs:0.5.1-node18-v2
+		entrypoint: [""]
+	allow_failure: false
+	cache: {}
+	needs:
+		- job: npm:install
+			optional: true
+	variables:
+		NAMESPACE: book-collection
+	script:
+	 - 7d ingest --files 'docs/**/*.md' --namespace $NAMESPACE
+	rules:
+		- if: $7DOCS_DISABLED
+			when: never
+		- if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+		- if: $CI_COMMIT_TAG
+						</code>
+					</pre>
+
+					<aside class="notes">
+						<ul>
+							<li>multistage build</li>
+							<li>restricted user privileges</li>
+							<li><b>NEXT: </b> Next steps</li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+
+			<section>
+				<h3>Next steps</h3>
+				<ul>
+					<li>Store questions and answers in the DB</li>
+					<li>Get the answers from DB</li>
+					<li>Collect feedbacks from users</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Useful Links</h3>
+				<ul>
+					<li><a href="https://platform.openai.com/docs/guides/embeddings/what-are-embeddings">What are embeddings</a></li>
+					<li><a href="https://www.analyticsvidhya.com/blog/2021/06/part-5-step-by-step-guide-to-master-nlp-text-vectorization-approaches/#">Text vectorization approches</a></li>
+					<li><a href="https://github.com/pgvector/pgvector">pg_vector</a></li>
+					<li><a href="https://discordjs.guide/">DiscordJS</a></li>
+					<li><a href="https://bun.sh/">bun.sh</a></li>
+				</ul>
+			</section>
+
+			<section data-background-image="./assets/so-long.jpg">
+				<h3 class="r-fit-text" style="color: rgb(214, 224, 24);">So Long, and Thanks for All the Fish</h3>
+			</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>
